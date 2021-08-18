@@ -138,23 +138,28 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">Toward Realistic Single-View 3D Object Reconstruction with Unsupervised Learning from Multiple Images</span>
+		<table align=center width=650px>
+			<table align=center width=650px>
 				<tr>
-					<td align=center width=100px>
+					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="">Long-Nhat Ho</a></span>
 						</center>
 					</td>
-					<td align=center width=100px>
+					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a href="">Anh Tran</a></span>
 						</center>
 					</td>
-					<td align=center width=100px>
+					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="">Quynh Phung</a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:24px"><a href="">Minh Hoai</a></span>
 						</center>
 					</td>
 				</tr>
@@ -168,7 +173,7 @@
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href=''>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -177,19 +182,12 @@
 	</center>
 
 	<center>
-		<table align=center width=850px>
+		<table align=center width=800px>
 			<tr>
-				<td width=260px>
+				<td width=500px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:800px" src="./resources/teaser.png"/>
 					</center>
-				</td>
-			</tr>
-		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
 				</td>
 			</tr>
 		</table>
@@ -197,34 +195,34 @@
 
 	<hr>
 
-	<table align=center width=850px>
+	<table align=center width=1000px>
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				Recovering the 3D structure of an object from a single image is a challenging task due to its ill-posed nature. One approach is to utilize the plentiful photos of the same object category to learn a strong 3D shape prior for the object. This approach has successfully been demonstrated by a re- cent work of Wu et al. (2020), which obtained impressive 3D reconstruction networks with unsupervised learning. However, their algorithm is only applicable to symmetric objects. In this paper, we eliminate the symmetry require- ment with a novel unsupervised algorithm that can learn a 3D reconstruction network from a multi-image dataset. Our algorithm is more general and covers the symmetry- required scenario as a special case. Besides, we employ a novel albedo loss that improves the reconstructed details and realisticity. Our method surpasses the previous work in both quality and robustness, as shown in experiments on datasets of various structures, including single-view, multi- view, image-collection, and video sets.
 			</td>
 		</tr>
 	</table>
 	<br>
 
-	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
+<!--	<hr>-->
+<!--	<center><h1>Talk</h1></center>-->
+<!--	<p align="center">-->
+<!--		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>-->
+<!--	</p>-->
 
-	<table align=center width=800px>
-		<br>
-		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
-		</tr>
-	</table>
-	<hr>
+<!--	<table align=center width=800px>-->
+<!--		<br>-->
+<!--		<tr>-->
+<!--			<center>-->
+<!--				<span style="font-size:28px"><a href=''>[Slides]</a>-->
+<!--				</span>-->
+<!--			</center>-->
+<!--		</tr>-->
+<!--	</table>-->
+<!--	<hr>-->
 
-	<center><h1>Code</h1></center>
+	<center><h1>Method Overview</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -234,11 +232,11 @@
 			</tr>
 		</center>
 	</table>
-	<table align=center width=400px>
+	<table align=center width=800px>
 		<tr>
-			<td align=center width=400px>
+			<td align=center width=800px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:800px" src="./resources/network.png"/></td>
 				</center>
 			</td>
 		</tr>
