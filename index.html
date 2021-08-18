@@ -2,6 +2,9 @@
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 
 <style type="text/css">
+	html * {
+		font-family: Arial !important;
+	}
 	body {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 		font-weight:300;
@@ -87,7 +90,15 @@
 		margin-left: 10px;
 		margin-right: 45px;
 	}
-
+	.content-block {
+		padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+      }
+      .overview-video {
+        background-color: rgb(240,240,240);
+    }	
 
 	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
 		box-shadow:
@@ -118,7 +129,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>Toward Realistic Single-View 3D Object Reconstruction with Unsupervised Learning from Multiple Images</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -139,31 +150,37 @@
 	<br>
 	<center>
 		<span style="font-size:36px">Toward Realistic Single-View 3D Object Reconstruction with Unsupervised Learning from Multiple Images</span>
+		<br>
+		<br>
+		<span style="font-size:26px">ICCV 2021</span>
+		<br>
+		<br>
 		<table align=center width=650px>
 			<table align=center width=650px>
 				<tr>
 					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="">Long-Nhat Ho</a></span>
+							<span style="font-size:20px; font-weight: bold;"><a href="">Long-Nhat Ho</a></span>
 						</center>
 					</td>
 					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="">Anh Tran</a></span>
+							<span style="font-size:20px; font-weight: bold;"><a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en">Anh Tran</a></span>
 						</center>
 					</td>
 					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="">Quynh Phung</a></span>
+							<span style="font-size:20px; font-weight: bold;"><a href="">Quynh Phung</a></span>
 						</center>
 					</td>
 					<td align=center width=150px>
 						<center>
-							<span style="font-size:24px"><a href="">Minh Hoai</a></span>
+							<span style="font-size:20px; font-weight: bold;"><a href="https://scholar.google.com/citations?hl=en&user=hRV0tY4AAAAJ">Minh Hoai</a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
+			<br>
 			<table align=center width=250px>
 				<tr>
 					<td align=center width=120px>
@@ -173,14 +190,15 @@
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href='https://github.com/VinAIResearch/LeMul'>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
 			</table>
 		</table>
 	</center>
-
+	<br>
+	<br>
 	<center>
 		<table align=center width=800px>
 			<tr>
@@ -194,15 +212,16 @@
 	</center>
 
 	<hr>
-
-	<table align=center width=1000px>
-		<center><h1>Abstract</h1></center>
-		<tr>
-			<td>
-				Recovering the 3D structure of an object from a single image is a challenging task due to its ill-posed nature. One approach is to utilize the plentiful photos of the same object category to learn a strong 3D shape prior for the object. This approach has successfully been demonstrated by a re- cent work of Wu et al. (2020), which obtained impressive 3D reconstruction networks with unsupervised learning. However, their algorithm is only applicable to symmetric objects. In this paper, we eliminate the symmetry require- ment with a novel unsupervised algorithm that can learn a 3D reconstruction network from a multi-image dataset. Our algorithm is more general and covers the symmetry- required scenario as a special case. Besides, we employ a novel albedo loss that improves the reconstructed details and realisticity. Our method surpasses the previous work in both quality and robustness, as shown in experiments on datasets of various structures, including single-view, multi- view, image-collection, and video sets.
-			</td>
-		</tr>
-	</table>
+	<div class="content-block overview-video">
+		<table align=center width=1000px>
+			<center><h1 style="font-weight: bold;">Abstract</h1></center>
+			<tr>
+				<td style="font-size:20px ">
+					Recovering the 3D structure of an object from a single image is a challenging task due to its ill-posed nature. One approach is to utilize the plentiful photos of the same object category to learn a strong 3D shape prior for the object. This approach has successfully been demonstrated by a recent work of Wu et al. (2020), which obtained impressive 3D reconstruction networks with unsupervised learning. However, their algorithm is only applicable to symmetric objects. In this paper, we eliminate the symmetry requirement with a novel unsupervised algorithm that can learn a 3D reconstruction network from a multi-image dataset. Our algorithm is more general and covers the symmetry-required scenario as a special case. Besides, we employ a novel albedo loss that  improves the reconstructed details and realisticity. Our method surpasses the previous work in both quality and robustness, as shown in experiments on datasets of various structures, including single-view, multi-view, image-collection, and video sets.
+				</td>
+			</tr>
+		</table>
+	</div>
 	<br>
 
 <!--	<hr>-->
@@ -222,7 +241,29 @@
 <!--	</table>-->
 <!--	<hr>-->
 
-	<center><h1>Method Overview</h1></center>
+	<center><h1 style="font-weight: bold;">Method Overview</h1></center>
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/network.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=800px style="margin-top: 1em;">
+		<center>
+			<tr>
+				<td align=center>
+					<span style="font-weight: bold; font-size: 20px; text-align: center;"> Overview of the LeMul system.</span> <br>
+					<span style="font-size: 20px; ">We train a decomposing network to optimize different loss components.<br> Note that we use diffuse shading images to visualize depth maps.</span>
+				</td>
+			</tr>
+		</center>
+	</table>
+	
+	<hr>
+	<center><h1 style="font-weight: bold;">Results</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -236,63 +277,20 @@
 		<tr>
 			<td align=center width=800px>
 				<center>
-					<td><img class="round" style="width:800px" src="./resources/network.png"/></td>
+					<td><img class="round" style="width:800px" src="./resources/results.png"/></td>
 				</center>
 			</td>
 		</tr>
 	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					Short description if wanted
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
-	</table>
 	<br>
 	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
-		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
-			</td>
-		</tr>
-	</table>
-	<br>
-
-	<table align=center width=600px>
-		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
-			</center></td>
-		</tr>
-	</table>
-
-	<hr>
-	<br>
 
 	<table align=center width=900px>
 		<tr>
-			<td width=400px>
+			<td width=400px align=center>
 				<left>
 					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
-				</left>
+					This project was greatly inspired by <a href="https://elliottwu.com/projects/unsup3d/">Unsup3d (LeSym)</a>
 			</td>
 		</tr>
 	</table>
